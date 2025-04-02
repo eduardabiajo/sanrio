@@ -3,4 +3,84 @@
 * {
     font-family: "Outfit", sans-serif ;
     scrollbar-width: thin;
+    text-decoration: none;
+}
+
+/* VARIAVEL DAS CORES */
+:root {
+
+    --background-color: rgba(255, 230, 235, 0.7); /* Rosa suave translúcido */
+
+    --fundo-menu-lateral: rgba(255, 220, 230); /* Rosa pastel */
+    --fundo-claro: #FFEFF8; /* Rosa bem claro */
+    --fundo-escuro: #FADADD; /* Rosa pêssego */
+
+    --borda-clara: #F8B4D9; /* Rosa médio */
+    --borda-escura: #E69EC1; /* Rosa um pouco mais escuro */
+
+    --texto-escuro: #5C374C; /* Vinho suave */
+    --texto-claro: #B06F8F; /* Rosa antigo */
+    --texto-branco: #FFFFFF; /* Branco puro */
+    --texto-hover: #D68BA0; /* Rosa médio */
+    --texto-opaco: #C8A6B2; /* Rosa acinzentado */
+
+    --cor-detalhes: #F4A9C0; /* Rosa alegre */
+
+    --texto-titulo-claro: #F6B6D2; /* Rosa claro vibrante */
+    --texto-titulo-escuro: #D88EAB; /* Rosa médio escuro */
+
+    --sombra-clara: rgba(255, 255, 255, 1);
+    --sombra-escura: rgba(119, 95, 104, 0.425); /* Sombra com tom rosado */
+}
+
+body {
+    color: var(--texto-claro);
+    background: var(--fundo-escuro);
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: var(--fundo-menu-lateral);
+    padding: 0 15px;
+    overflow-y: auto;
+    z-index: 99;
+    transition: all ease-in-out 0.5s;
+}
+
+#header .perfil img {
+    margin: 15px auto;
+    display: block;
+}
+
+.perfil .social-links i {
+    font-size: 18px;
+    display: inline-block;
+    background: transparent;
+    color: var(--texto-claro);
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 5px;
+    border-radius: 50%;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 5px 0px var(--sombra-escura);
+}
+
+.perfil .social-links a:hover,
+.social-links i:hover {
+    font-size: 18px;
+    display: inline-block;
+    background: white;
+    color: var(--texto-escuro);
+    margin-right: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    box-shadow: 0px 0px 5px 0px var(--sombra-escura);
 }
