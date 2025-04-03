@@ -30,7 +30,7 @@
     --texto-titulo-escuro: #D88EAB; /* Rosa médio escuro */
 
     --sombra-clara: rgba(255, 255, 255, 1);
-    --sombra-escura: rgba(119, 95, 104, 0.425); /* Sombra com tom rosado */
+    --sombra-escura: rgb(119, 95, 104); /* Sombra com tom rosado */
 }
 
 body {
@@ -54,6 +54,7 @@ body {
 #header .perfil img {
     margin: 15px auto;
     display: block;
+    width: 13rem;
 }
 
 .perfil .social-links i {
@@ -83,4 +84,37 @@ body {
     width: 35px;
     height: 35px;
     box-shadow: 0px 0px 5px 0px var(--sombra-escura);
+}
+
+.mobile-nav-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 99999;
+    border: 0;
+    font-size: 26px;
+    transition: all 0.4s;
+    background: var(--fundo-menu-lateral);
+    color: var(--texto-claro);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.mobile-nav-active {
+    overflow: hidden;
+}
+
+.mobile-nav-active #header {
+    left: 0;
+}
+
+@media (max-width: 1199px) {
+    #header {
+        left: -300px;
+    }
 }
