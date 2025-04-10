@@ -47,5 +47,25 @@
     
 
 
+    // Efeito Digitação
+    const typed = select('.typed')
+
+         if (typed) {
+            let typed_strings = typed.getAttribute('data-typed-items')
+            typed_strings = typed_strings.split(',')
+            
+            new Typed('.typed', {
+                strings: typed_strings,
+                loop: true,
+                typeSpeed: 90, /* velocidade digitação */
+                backSpeed: 50, /* velocidade  de apaagr */
+                backDelay: 800,
+
+    });
+
+ }
+
+
+
 
 })()
