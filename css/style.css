@@ -38,6 +38,10 @@ body {
     background: var(--fundo-escuro);
 }
 
+p {
+    font-size: 18px;
+}
+
 #header {
     position: fixed;
     top: 0;
@@ -60,7 +64,7 @@ body {
 .perfil .social-links i {
     font-size: 18px;
     display: inline-block;
-    background: transparent;
+    background: var(--fundo-claro);
     color: var(--texto-claro);
     line-height: 1;
     padding: 8px 0;
@@ -111,6 +115,11 @@ body {
 
 .mobile-nav-active #header {
     left: 0;
+}
+
+#main {
+    margin-left: 300px;
+    background: var(--fundo-escuro);
 }
 
 @media (max-width: 1199px) {
@@ -231,7 +240,7 @@ body {
     height: 100vh;
     background: url(/img/fundo.png) ;
     position: relative;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
 
 }
@@ -272,13 +281,34 @@ body {
     border-bottom: 3px solid var(--texto-escuro);
 }
 
+@media (min-width: 1024px) {
+    #hero {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 1024px) {
+    #hero {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero h2 {
+        padding-left: 20px;
+        font-size: 80px;
+        line-height: 1;
+        margin-bottom: 45px;
+    }
+
+    #hero p {
+        font-size: 27px;
+        padding-left: 20px;
+    }
+
+}
 
 /* Estrutura Base - Corpo */
-
-#main {
-    margin-left: 300px;
-    background: var(--fundo-escuro);
-}
 
 .container {
     padding-left: 35px;
@@ -309,5 +339,49 @@ section {
 }
 
 .section-title h2::after {
-    
+    content: "";
+    background: var(--texto-escuro);
+    position: absolute;
+    width: 55px;
+    height: 3px;
+    display: block;
+    left: 0;
+}
+
+.section-title p {
+    margin-bottom: 0;
+}
+
+
+/* SOBRE */
+
+.sobre .content h3 {
+    color: var(--texto-escuro);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 26px;
+}
+
+.sobre .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sobre .content ul strong {
+    margin-right: 5px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    color: var(--texto-escuro);
+}
+
+.sobre .content ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.sobre .content ul i {
+    color: var(--texto-claro);
+    margin-right: 10px;
+    font-size: 20px;
 }
