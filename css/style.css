@@ -349,6 +349,7 @@ section {
 }
 
 .section-title p {
+    color: #000000;
     margin-bottom: 0;
 }
 
@@ -384,4 +385,80 @@ section {
     color: var(--texto-claro);
     margin-right: 10px;
     font-size: 20px;
+}
+
+.conquistas {
+    padding-bottom: 30px;
+}
+
+.conquistas .count-box {
+    padding: 30px;
+    width: 100%;
+}
+
+.conquistas .count-box i {
+    color: var(--texto-hover);
+    font-size: 44px;
+}
+
+.conquistas .count-box .count-box-i {
+    color: var(--texto-hover);
+    font-size: 44px;
+    display: block;
+    float: left;
+    line-height: 40px;
+}
+
+.conquistas .count-box span {
+    font-size: 48px;
+    color: var(--texto-hover);
+    display: block;
+    line-height: 40px;
+    font-weight: 700;
+    margin-left: 0px;
+}
+
+.conquistas .count-box p {
+    padding: 15px 0 0px 0px;
+    margin: 0 0 0 20px;
+    color: var(--texto-escuro);
+}
+
+.conquistas .count-box strong {
+    font-weight: 800;
+}
+
+.conquistas .count-box i:hover,
+.conquistas .count-box span:hover {
+    color: #e9b0c5;
+    transition: ease-in-out .4s;
+}
+
+.skills .progress {
+    height: 60px;
+    display: block;
+    background: none;
+    border-radius: 0;
+}
+
+.skills .progress .skill {
+    padding: 0;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+    display: block;
+    color: var(--texto-escuro);
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.skills .progress .skill .val {
+    font-style: normal;
+    float: right;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.skills .progress-bar-bg {
+    background: var(--texto-hover);
+    height: 10px;
 }

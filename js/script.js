@@ -33,38 +33,46 @@
     }
 
     // Ativar Botao Menu no modo Mobile
-    
-    on('click', '.mobile-nav-toggle', function() {
+
+    on('click', '.mobile-nav-toggle', function () {
         select('body').classList.toggle('mobile-nav-active')
         this.classList.toggle('bi-list')
         this.classList.toggle('bi-x')
     })
 
-    
-
-
-    
-    
-
-
     // Efeito Digitação
     const typed = select('.typed')
 
-         if (typed) {
-            let typed_strings = typed.getAttribute('data-typed-items')
-            typed_strings = typed_strings.split(',')
-            
-            new Typed('.typed', {
-                strings: typed_strings,
-                loop: true,
-                typeSpeed: 90, /* velocidade digitação */
-                backSpeed: 50, /* velocidade  de apaagr */
-                backDelay: 800,
+    if (typed) {
+        let typed_strings = typed.getAttribute('data-typed-items')
+        typed_strings = typed_strings.split(',')
 
-    });
+        new Typed('.typed', {
+            strings: typed_strings,
+            loop: true,
+            typeSpeed: 100, //velocidade digitação
+            backSpeed: 50, //velocidade em apagar
+            backDelay: 2000, //tempo de espera
+        });
 
- }
+    }
 
+    new PureCounter();
+    /* JS PARA SKILLS = VENDAS */
+
+    let skilsContent = select('.skills-content');
+    if (skilsContent) { /* verifica se o elemento existe */
+        new Waypoint({ /* cria uma instancia */
+            element: skilsContent, 
+            offset: '80%', /* janela de visualização */
+            handler: function(direction) {
+                let progress = select('.progress .progress-bar', true);
+                progress.forEach((el) => {
+                    el.style.width = el.getAttribute('aria-valuenow') + '%'
+                })
+            }
+        })
+    }
 
 
 
