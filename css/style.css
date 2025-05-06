@@ -421,7 +421,7 @@ section {
 .conquistas .count-box p {
     padding: 15px 0 0px 0px;
     margin: 0 0 0 20px;
-    color: var(--texto-escuro);
+    color: var(--texto-claro);
 }
 
 .conquistas .count-box strong {
@@ -459,6 +459,13 @@ section {
 }
 
 .skills .progress-bar-bg {
-    background: var(--texto-hover);
+    background: var(--fundo-menu-lateral);
     height: 10px;
+}
+
+.skills .progress-bar {
+    height: 10px;
+    background: var(--texto-claro);
+    transition: 3s;
+    width: 1px;
 }
